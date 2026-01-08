@@ -41,7 +41,7 @@ class BukuController extends Controller
 
         alert()->success('Success', 'Buku sdh ditambah');
 
-        return redirect()->route('bukus.index');
+        return redirect()->route('buku.index');
     }
 
     /**
@@ -78,7 +78,7 @@ class BukuController extends Controller
 
         alert()->success('Success', 'Buku sdh diupdate');
         
-        return redirect()->route('bukus.index');
+        return redirect()->route('buku.index');
     }
 
     /**
@@ -90,6 +90,6 @@ class BukuController extends Controller
 
         alert()->success('Success', 'tehapus bukunya');
 
-        return redirect()->route('bukus.index');
+        return redirect()->route('buku.index');
     }
 }

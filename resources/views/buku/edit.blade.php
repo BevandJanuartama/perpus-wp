@@ -20,7 +20,7 @@
             <p class="text-indigo-100 text-sm mt-1">Perbarui detail buku yang ada di koleksi perpustakaan.</p>
         </div>
 
-        <form action="{{ route('bukus.update', $buku) }}" method="POST" class="p-8 space-y-6">
+        <form action="{{ route('buku.update', $buku) }}" method="POST" class="p-8 space-y-6">
             @csrf
             @method('PUT')
 
@@ -71,7 +71,7 @@
             </div>
 
             <div class="flex items-center justify-end space-x-4 pt-4 border-t border-gray-100">
-                <a href="{{ route('bukus.index') }}" 
+                <a href="{{ route('buku.index') }}" 
                    class="px-6 py-2.5 text-sm font-medium text-gray-600 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200">
                     Batal
                 </a>

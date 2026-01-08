@@ -25,7 +25,7 @@
             <p class="text-emerald-50 text-sm opacity-90">Lengkapi formulir di bawah untuk menambah koleksi perpustakaan.</p>
         </div>
 
-        <form action="{{ route('bukus.store') }}" method="POST" class="p-8 space-y-5">
+        <form action="{{ route('buku.store') }}" method="POST" class="p-8 space-y-5">
             @csrf
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -78,7 +78,7 @@
             </div>
 
             <div class="flex items-center justify-between pt-6 mt-4 border-t border-slate-100">
-                <a href="{{ route('bukus.index') }}" class="text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors">
+                <a href="{{ route('buku.index') }}" class="text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors">
                     ← Kembali ke daftar
                 </a>
                 <button type="submit" 

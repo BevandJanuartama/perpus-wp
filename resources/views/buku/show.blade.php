@@ -13,7 +13,7 @@
 <body class="bg-slate-50 min-h-screen py-12 px-4">
 
     <div class="max-w-3xl mx-auto">
-        <a href="{{ route('bukus.index') }}" class="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800 mb-6 transition-colors">
+        <a href="{{ route('buku.index') }}" class="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800 mb-6 transition-colors">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
             </svg>
@@ -61,11 +61,11 @@
                 </div>
 
                 <div class="mt-12 pt-8 border-t border-slate-100 flex flex-wrap gap-4">
-                    <a href="{{ route('bukus.edit', $buku) }}" 
+                    <a href="{{ route('buku.edit', $buku) }}" 
                        class="flex-1 md:flex-none text-center px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition shadow-lg shadow-indigo-100">
                         Edit Informasi
                     </a>
-                    <form action="{{ route('bukus.destroy', $buku) }}" method="POST" class="flex-1 md:flex-none">
+                    <form action="{{ route('buku.destroy', $buku) }}" method="POST" class="flex-1 md:flex-none">
                         @csrf
                         @method('DELETE')
                         <button type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')" 

@@ -65,7 +65,7 @@
             <div>
                 <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Buku</h1>
             </div>
-            <a href="{{ route('bukus.create') }}" 
+            <a href="{{ route('buku.create') }}" 
                class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-xl shadow-lg shadow-indigo-100 transition-all font-semibold active:scale-95">
                 + Tambah Buku Baru
             </a>
@@ -112,17 +112,17 @@
 
                         <td class="px-4 py-4 whitespace-nowrap">
                             <div class="flex justify-center items-center gap-2">
-                                <a href="{{ route('bukus.show', $buku) }}" 
+                                <a href="{{ route('buku.show', $buku) }}" 
                                    class="text-indigo-600 hover:text-indigo-900 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors duration-200">
                                     Detail
                                 </a>
 
-                                <a href="{{ route('bukus.edit', $buku) }}" 
+                                <a href="{{ route('buku.edit', $buku) }}" 
                                    class="text-amber-600 hover:text-amber-900 bg-amber-50 hover:bg-amber-100 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors duration-200">
                                     Edit
                                 </a>
 
-                                <form action="{{ route('bukus.destroy', $buku) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus buku ini?')" class="inline">
+                                <form action="{{ route('buku.destroy', $buku) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus buku ini?')" class="inline">
                                     @csrf 
                                     @method('DELETE')
                                     <button type="submit" 

@@ -6,4 +6,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('bukus', App\Http\Controllers\BukuController::class);
+Route::resource('buku', App\Http\Controllers\BukuController::class);
