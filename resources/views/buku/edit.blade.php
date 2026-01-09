@@ -9,7 +9,6 @@
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
-            /* Background Foto Batman dengan Overlay Gelap agar form kontras */
             background: linear-gradient(rgba(15, 17, 21, 0.8), rgba(15, 17, 21, 0.95)), 
                         url('https://i.pinimg.com/1200x/b7/a7/4a/b7a74a4d064156594c14cb86fa503161.jpg');
             background-size: cover;
@@ -18,7 +17,6 @@
             color: #e5e7eb;
         }
 
-        /* Efek kartu transparan blur (Glassmorphism) */
         .bat-card {
             background-color: rgba(26, 29, 35, 0.85);
             border: 1px solid rgba(250, 204, 21, 0.2);
@@ -31,7 +29,6 @@
             border-bottom: 1px solid rgba(250, 204, 21, 0.3);
         }
 
-        /* Styling Input ala Bat-Computer */
         .bat-input {
             background-color: rgba(45, 49, 57, 0.8) !important;
             border: 1px solid rgba(63, 68, 78, 1) !important;
@@ -45,7 +42,6 @@
             outline: none;
         }
 
-        /* Scrollbar Kuning Batman */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #0f1115; }
         ::-webkit-scrollbar-thumb { background: #facc15; border-radius: 10px; }

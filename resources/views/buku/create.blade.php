@@ -9,7 +9,6 @@
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
-            /* Menggunakan Background Foto Batman dengan Overlay Gelap */
             background: linear-gradient(rgba(15, 17, 21, 0.8), rgba(15, 17, 21, 0.9)), 
                         url('https://i.pinimg.com/1200x/b7/a7/4a/b7a74a4d064156594c14cb86fa503161.jpg');
             background-size: cover;
@@ -18,7 +17,6 @@
             color: #e5e7eb;
         }
 
-        /* Bat-Card dengan efek Glassmorphism */
         .bat-card {
             background-color: rgba(26, 29, 35, 0.85);
             border: 1px solid rgba(250, 204, 21, 0.2);
@@ -26,13 +24,11 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
-        /* Header Card yang lebih gelap */
         .bat-header {
             background-color: rgba(20, 22, 26, 0.7);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Custom Input Styling */
         .bat-input {
             background-color: rgba(45, 49, 57, 0.8) !important;
             border: 1px solid rgba(63, 68, 78, 1) !important;
@@ -46,7 +42,6 @@
             outline: none;
         }
 
-        /* Scrollbar kustom agar tetap tema dark */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f1115; }
         ::-webkit-scrollbar-thumb { background: #facc15; border-radius: 10px; }

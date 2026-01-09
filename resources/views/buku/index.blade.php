@@ -12,7 +12,6 @@
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
-            /* Ganti URL di bawah dengan foto Batman favoritmu */
             background: linear-gradient(rgba(15, 17, 21, 0.85), rgba(15, 17, 21, 0.95)), 
                         url('https://i.pinimg.com/736x/25/24/84/25248491ab78751134d1fa72aec0fe0f.jpg');
             background-size: cover;
@@ -20,8 +19,6 @@
             background-attachment: fixed;
             color: #e5e7eb;
         }
-
-        /* Card transparan agar foto background sedikit terlihat (Glassmorphism ringan) */
         .bat-card {
             background-color: rgba(26, 29, 35, 0.8);
             border: 1px solid rgba(250, 204, 21, 0.2);
@@ -29,7 +26,6 @@
             border-radius: 12px;
         }
 
-        /* Table & DataTables Styling (Sama seperti sebelumnya) */
         .dataTables_wrapper .dataTables_length select,
         .dataTables_wrapper .dataTables_filter input {
             background-color: rgba(45, 49, 57, 0.8) !important;
