@@ -26,11 +26,30 @@
             border-radius: 12px;
         }
 
+        #filterGenre {
+            background: rgba(15, 17, 21, 0.9);
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            color: #facc15;
+            font-family: monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #filterGenre:hover {
+            border-color: #facc15;
+            box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+        }
+
+        /* DataTables Custom UI */
         .dataTables_wrapper .dataTables_length select,
         .dataTables_wrapper .dataTables_filter input {
             background-color: rgba(45, 49, 57, 0.8) !important;
             border: 1px solid #3f444e !important;
             color: white !important;
+            font-size: 12px;
+            text-transform: uppercase;
         }
 
         table.dataTable thead th {
@@ -51,6 +70,7 @@
             background: #facc15 !important;
             color: #000 !important;
             border-radius: 6px;
+            font-weight: bold;
         }
 
         table.dataTable thead th {
@@ -85,6 +105,20 @@
         </div>
 
         <div class="bat-card p-6 shadow-2xl">
+            <div class="bat-filter-container mb-2 p-4 flex flex-wrap items-center gap-6">
+                <div class="flex flex-col gap-1">
+                    <span class="text-[10px] text-yellow-400 font-black tracking-widest uppercase">Encryption Filter</span>
+                    <div class="flex items-center gap-3">
+                        <select id="filterGenre" class="px-4 py-2 rounded-sm text-xs font-bold outline-none border border-yellow-400/30">
+                            <option value="">ALL SECTORS</option>
+                            <option value="Ilmiah">SCIENTIFIC / ILMIAH</option>
+                            <option value="Fantasi">FANTASY / FANTASI</option>
+                            <option value="Romantis">ROMANTIC / ROMANTIS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
             <table id="myTable" class="display w-full">
                 <thead>
                     <tr>
@@ -143,9 +177,16 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#myTable').DataTable({
+            var table = $('#myTable').DataTable({
                 "language": { "url": "//cdn.datatables.net/plug-ins/1.13.6/i18n/id.json" },
                 "pageLength": 10
+            });
+
+            // Filter logic
+            $('#filterGenre').on('change', function() {
+                var selectedGenre = $(this).val();
+                // Column 2 is Genre
+                table.column(2).search(selectedGenre).draw();
             });
         });
     </script>
