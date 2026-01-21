@@ -98,10 +98,21 @@
                 </h1>
                 <p class="text-gray-400 text-xs font-bold tracking-[0.3em] uppercase mt-1">Wayne Enterprises Security System</p>
             </div>
-            <a href="{{ route('buku.create') }}" 
-               class="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-md shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all font-black uppercase tracking-widest text-xs active:scale-95">
-                + Add Record
-            </a>
+            
+            <div class="flex items-center gap-4">
+                <a href="{{ route('buku.create') }}" 
+                class="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-md shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all font-black uppercase tracking-widest text-xs active:scale-95">
+                    + Add Record
+                </a>
+
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" 
+                            class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md shadow-[0_0_20px_rgba(220,38,38,0.3)] transition-all font-black uppercase tracking-widest text-xs active:scale-95">
+                        Logout
+                    </button>
+                </form>
+            </div>
         </div>
 
         <div class="bat-card p-6 shadow-2xl">
