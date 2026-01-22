@@ -48,7 +48,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
         Auth::login($user);
 
-        return redirect(route('buku.index', absolute: false))
+        return redirect(route('user.index', absolute: false))
             ->with('success', 'Akun berhasil dibuat! Selamat datang, ' . $user->username);
     }
 }
